@@ -20,11 +20,11 @@ router.post("/symptoms", (req, res) => {
       symptomsModel,
       JSON.stringify({ data }),
     ]);
-    let prediction;
+    let prediction = "";
+    let stdoutData = "";
+
     pythonProcess.stdout.on("data", (data) => {
-      const dataString = data.toString();
-      console.log("Python script output===========:", JSON.parse(dataString));
-      prediction = JSON.parse(dataString);
+      stdoutData += data.toString();
     });
 
     pythonProcess.stderr.on("data", (data) => {
@@ -33,12 +33,19 @@ router.post("/symptoms", (req, res) => {
 
     pythonProcess.on("close", (code) => {
       console.log("Python process closed with code:", code);
-      console.log("Prediction:", prediction);
+      try {
+        prediction = JSON.parse(stdoutData.trim());
+        console.log("Python script output===========:", prediction);
+      } catch (err) {
+        console.error("Failed to parse Python output as JSON:", stdoutData);
+        prediction = null;
+      }
       if (!responseSent) {
         res.json({ data: prediction });
         responseSent = true;
       }
     });
+
     pythonProcess.on("error", (error) => {
       console.error("Python process error:", error);
       if (!responseSent) {
