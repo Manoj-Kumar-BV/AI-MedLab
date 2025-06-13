@@ -2,13 +2,17 @@ import express from "express";
 import { spawn } from "child_process";
 const router = express.Router({ mergeParams: true });
 
-const pythonScriptPathForSymptoms = "D:\\AI-MedLab\\backend\\symptoms.py";
-const symptomsModel = "D:\\AI-MedLab\\backend\\aimodels\\svc.pkl";
+const pythonScriptPathForSymptoms = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\symptoms.py";
+const symptomsModel = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\aimodels\\svc.pkl";
 
 router.post("/symptoms", (req, res) => {
-  let responseSent = false; // Flag to track if response has been sent
+  let responseSent = false;
   try {
-    const data = req.body.data;
+    let data = req.body.data;
+    // If data is a string, split it into an array
+    if (typeof data === "string") {
+      data = data.split(",").map(s => s.trim());
+    }
     console.log({ dataInString: JSON.stringify({ data }) });
     const pythonProcess = spawn("python", [
       pythonScriptPathForSymptoms,

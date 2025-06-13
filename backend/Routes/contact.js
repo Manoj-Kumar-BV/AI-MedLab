@@ -24,10 +24,10 @@ router.post("/contact", async (req, res) => {
     // Send email using the transporter
     let info = await transporter.sendMail({
       from: {
-        name: "Abdul Wahab",
+        name: "Manoj Kumar B V",
         address: process.env.USER,
       },
-      to: "awminhas619@gmail.com",
+      to: "manojkumar69bv@gmail.com",
       subject: subject,
       text: `Email: ${email}\n\nMessage: ${message}`,
     });

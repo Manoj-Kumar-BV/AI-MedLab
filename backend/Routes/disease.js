@@ -5,18 +5,18 @@ import path from "path";
 
 const router = express.Router();
 
-const diabetesModel = "D:\\AI-MedLab\\backend\\aimodels\\diabetes.pkl";
-const heartModel = "D:\\AI-MedLab\\backend\\aimodels\\heart.pkl";
-const kidneyModel = "D:\\AI-MedLab\\backend\\aimodels\\kidney.pkl";
-const liverModel = "D:\\AI-MedLab\\backend\\aimodels\\kidney.pkl";
-const breastCancerModel = "D:\\AI-MedLab\\backend\\aimodels\\breast_cancer.pkl";
+const diabetesModel = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\aimodels\\diabetes.pkl";
+const heartModel = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\aimodels\\heart.pkl";
+const kidneyModel = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\aimodels\\kidney.pkl";
+const liverModel = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\aimodels\\liver.pkl";
+const breastCancerModel = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\aimodels\\breast_cancer.pkl";
 
-const pythonScriptPathForDiabetes = "D:\\AI-MedLab\\backend\\predict.py";
-const pythonScriptPathForHeart = "D:\\AI-MedLab\\backend\\heart.py";
-const pythonScriptPathForKidney = "D:\\AI-MedLab\\backend\\kidney.py";
-const pythonScriptPathForLiver = "D:\\AI-MedLab\\backend\\kidney.py";
+const pythonScriptPathForDiabetes = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\predict.py";
+const pythonScriptPathForHeart = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\heart.py";
+const pythonScriptPathForKidney = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\kidney.py";
+const pythonScriptPathForLiver = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\liver.py";
 const pythonScriptPathForBreastCancer =
-  "D:\\AI-MedLab\\backend\\breast-cancer.py";
+  "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\breast-cancer.py";
 
 router.post("/diabetes", (req, res) => {
   try {
@@ -263,7 +263,7 @@ router.post("/predict-pneumonia", upload.single("image"), (req, res) => {
     const imagePath = req.file.path;
 
     // Path to the Python script for pneumonia prediction
-    const pythonScriptPathForPneumonia = "D:\\AI-MedLab\\backend\\pneumonia.py";
+    const pythonScriptPathForPneumonia = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\pneumonia.py";
 
     // Spawn a Python process to execute the prediction script
     const pythonProcess = spawn("python", [
@@ -314,7 +314,7 @@ router.post("/predict-malaria", upload.single("image"), (req, res) => {
     const imagePath = req.file.path;
 
     // Path to the Python script for pneumonia prediction
-    const pythonScriptPathForPneumonia = "D:\\AI-MedLab\\backend\\malaria.py";
+    const pythonScriptPathForPneumonia = "C:\\Users\\manoj\\OneDrive\\Documents\\Web-F\\AI-MedLab\\backend\\malaria.py";
 
     // Spawn a Python process to execute the prediction script
     const pythonProcess = spawn("python", [

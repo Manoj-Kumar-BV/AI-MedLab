@@ -29,10 +29,10 @@ router.post("/forgot-password", async (req, res) => {
     });
     const mailOptions = {
       from: {
-        name: "Abdul Wahab",
+        name: "Manoj Kumar B V",
         user: process.env.USER,
       },
-      to: "awminhas619@gmail.com",
+      to: "manojkumar69bv@gmail.com",
       subject: "Sending Email for Reset Password",
       text: `http://localhost:5173/reset-password/${user._id}/${token}`,
     };
