@@ -1,4 +1,4 @@
-Flask
+absl-py
 astor
 cached-property
 cachetools
@@ -7,6 +7,7 @@ chardet
 click
 colorama
 dataclasses
+Flask
 gast
 google-auth
 google-auth-oauthlib
@@ -27,6 +28,7 @@ oauthlib
 opt-einsum
 pickle-mixin
 Pillow
+protobuf
 pyasn1
 pyasn1-modules
 requests
@@ -35,8 +37,8 @@ rsa
 scikit-learn
 scipy
 six
-tensorflow==2.12 # Let it handle all versions!
 tensorboard
+tensorflow
 tensorflow-estimator
 termcolor
 typing-extensions
