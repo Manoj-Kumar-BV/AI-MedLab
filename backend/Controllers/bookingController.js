@@ -13,11 +13,19 @@ export const getCheckoutSession = async (req, res) => {
 
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
+    const productData = {
+      name: doctor.name,
+      description: doctor.bio,
+    };
+    if (doctor.photo && doctor.photo.trim() !== "") {
+      productData.images = [doctor.photo];
+    }
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "payment",
-      success_url: `${process.env.CLIENT_SITE_URL}/checkout-success`,
-      cancel_url: `${req.protocol}://${req.get("host")}/doctors/${doctor.id}`,
+      success_url: `http://localhost:5173/home/checkout-success`,
+      cancel_url: `http://localhost:5173/home/doctors/${doctor.id}`,
       customer_email: user.email,
       client_reference_id: req.params.doctorId,
       line_items: [
@@ -25,11 +33,7 @@ export const getCheckoutSession = async (req, res) => {
           price_data: {
             currency: "usd",
             unit_amount: doctor.ticketPrice * 100,
-            product_data: {
-              name: doctor.name,
-              description: doctor.bio,
-              images: [doctor.photo],
-            },
+            product_data: productData,
           },
           quantity: 1,
         },
