@@ -9,19 +9,19 @@ import {
 } from "react-icons/ai";
 const socialLinks = [
   {
-    path: "https://github.com/abdul-wahab619",
+    path: "https://github.com/",
     icon: <AiFillGithub className="group-hover:text-white w-4 h-5" />,
   },
   {
-    path: "https://www.youtube.com/@abdul-wahab-aw",
+    path: "https://www.youtube.com/",
     icon: <AiFillYoutube className="group-hover:text-white w-4 h-5" />,
   },
   {
-    path: "https://www.instagram.com/mr.abdulwahab.aw/",
+    path: "https://www.instagram.com/",
     icon: <AiFillInstagram className="group-hover:text-white w-4 h-5" />,
   },
   {
-    path: "https://www.linkedin.com/in/abdul-wahab-aw/",
+    path: "https://www.linkedin.com/",
     icon: <AiFillLinkedin className="group-hover:text-white w-4 h-5" />,
   },
 ];
@@ -86,8 +86,7 @@ const Footer = () => {
               alt=""
             />
             <p className="text-[16px] leading-7 font-[400] text-textColor mt-4">
-              Copyright &#169; {year} developed by Abdul Wahab & Nafeesa
-              Shehzadi all right reserved.
+              Copyright &#169; {year}
             </p>
             <div className="flex items-center gap-3 mt-4">
               {socialLinks.map((link, index) => (
