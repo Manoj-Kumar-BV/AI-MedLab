@@ -35,10 +35,9 @@ const Testimonial = () => {
               <img src={patientAvatar} alt="" />
               <div>
                 <h4 className="text-[18px] leading-[30px] font-semibold text-headingColor">
-                  Abdul Wahab
+                  Tim David
                 </h4>
                 <div className="flex items-center gap-[2px]">
-                  <HiStar className="text-yellowColor w-[10px] h-5" />
                   <HiStar className="text-yellowColor w-[10px] h-5" />
                   <HiStar className="text-yellowColor w-[10px] h-5" />
                   <HiStar className="text-yellowColor w-[10px] h-5" />
@@ -47,8 +46,8 @@ const Testimonial = () => {
               </div>
             </div>
             <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
-              I have take medical services from them. They treat so well and
-              they are providing the best medical services.{" "}
+              The doctors were very attentive and explained everything clearly. I
+              felt comfortable and well cared for throughout my visit.
             </p>
           </div>
         </SwiperSlide>
@@ -59,7 +58,7 @@ const Testimonial = () => {
               <img src={patientAvatar} alt="" />
               <div>
                 <h4 className="text-[18px] leading-[30px] font-semibold text-headingColor">
-                  Abdul Wahab
+                  Suyash Sharma
                 </h4>
                 <div className="flex items-center gap-[2px]">
                   <HiStar className="text-yellowColor w-[10px] h-5" />
@@ -71,8 +70,8 @@ const Testimonial = () => {
               </div>
             </div>
             <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
-              I have take medical services from them. They treat so well and
-              they are providing the best medical services.{" "}
+              Booking an appointment was quick and easy. The staff was friendly
+              and the facilities were very clean and modern.
             </p>
           </div>
         </SwiperSlide>
@@ -83,7 +82,7 @@ const Testimonial = () => {
               <img src={patientAvatar} alt="" />
               <div>
                 <h4 className="text-[18px] leading-[30px] font-semibold text-headingColor">
-                  Abdul Wahab
+                  Hazlewood
                 </h4>
                 <div className="flex items-center gap-[2px]">
                   <HiStar className="text-yellowColor w-[10px] h-5" />
@@ -95,8 +94,8 @@ const Testimonial = () => {
               </div>
             </div>
             <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
-              I have take medical services from them. They treat so well and
-              they are providing the best medical services.{" "}
+              I appreciated the follow-up after my tests. The team made sure I
+              understood my results and next steps.
             </p>
           </div>
         </SwiperSlide>
@@ -107,7 +106,7 @@ const Testimonial = () => {
               <img src={patientAvatar} alt="" />
               <div>
                 <h4 className="text-[18px] leading-[30px] font-semibold text-headingColor">
-                  Abdul Wahab
+                  Dayal
                 </h4>
                 <div className="flex items-center gap-[2px]">
                   <HiStar className="text-yellowColor w-[10px] h-5" />
@@ -119,8 +118,8 @@ const Testimonial = () => {
               </div>
             </div>
             <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
-              I have take medical services from them. They treat so well and
-              they are providing the best medical services.{" "}
+              The online consultation was seamless and saved me a lot of time.
+              Highly recommend their digital services!
             </p>
           </div>
         </SwiperSlide>
@@ -131,7 +130,7 @@ const Testimonial = () => {
               <img src={patientAvatar} alt="" />
               <div>
                 <h4 className="text-[18px] leading-[30px] font-semibold text-headingColor">
-                  Abdul Wahab
+                  Ricky Ponting
                 </h4>
                 <div className="flex items-center gap-[2px]">
                   <HiStar className="text-yellowColor w-[10px] h-5" />
@@ -143,35 +142,12 @@ const Testimonial = () => {
               </div>
             </div>
             <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
-              I have take medical services from them. They treat so well and
-              they are providing the best medical services.{" "}
+              Excellent experience from start to finish. The doctors are
+              knowledgeable and genuinely care about their patients.
             </p>
           </div>
         </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="py-[30px] px-5 rounded-3">
-            <div className="flex items-center gap-[13px]">
-              <img src={patientAvatar} alt="" />
-              <div>
-                <h4 className="text-[18px] leading-[30px] font-semibold text-headingColor">
-                  Abdul Wahab
-                </h4>
-                <div className="flex items-center gap-[2px]">
-                  <HiStar className="text-yellowColor w-[10px] h-5" />
-                  <HiStar className="text-yellowColor w-[10px] h-5" />
-                  <HiStar className="text-yellowColor w-[10px] h-5" />
-                  <HiStar className="text-yellowColor w-[10px] h-5" />
-                  <HiStar className="text-yellowColor w-[10px] h-5" />
-                </div>
-              </div>
-            </div>
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
-              I have take medical services from them. They treat so well and
-              they are providing the best medical services.{" "}
-            </p>
-          </div>
-        </SwiperSlide>
+        
       </Swiper>
     </div>
   );
