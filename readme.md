@@ -49,7 +49,7 @@ The project is structured into two main directories:
 1. **Clone the repository**
 
 ```bash
-   git clone https://github.com/your-username/ai-medical-lab.git
+   https://github.com/Manoj-Kumar-BV/AI-MedLab
    cd ai-medical-lab
 ```
 
