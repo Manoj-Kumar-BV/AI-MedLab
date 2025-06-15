@@ -50,7 +50,7 @@ The project is structured into two main directories:
 
 ```bash
    https://github.com/Manoj-Kumar-BV/AI-MedLab
-   cd ai-medical-lab
+   cd AI-MedLab
 ```
 
 2. **Install dependencies for backend**
@@ -74,20 +74,24 @@ The project is structured into two main directories:
 ```text
    MONGO_URI=your_mongodb_uri
    PORT=5000
+   JWT_SECRET_KEY=your_jwt_secret_key
+   USER=email@gmail-address
+   APP_PASS=your_gmail_app_password
+   STRIPE_SECRET_KEY=your_test_stripe_secret_key
 ```
 
 5. **Run the backend server**
 
 ```bash
    cd ../backend
-   npm start or nodemon
+   npm start
 ```
 
 6. **Run the frontend server**
 
 ```bash
    cd ../frontend
-   npm start
+   npm run dev
 ```
 
 ## Usage
